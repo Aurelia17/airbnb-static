@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h1 class="text-center">🏡 Our Flats 🏡</h1>
+  <div class="row mt-5 justify-content-center">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4">
+        <div class="card mx-auto mb-5" style="width: 18rem;">
+          <img src="<%= flat["imageUrl"] %>" class="card-img-top" alt="<%= flat["name"] %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat["name"] %></h5>
+            <p class="card-text">Price : <%= flat["price"] %> <%= flat["priceCurrency"] %></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-outline-success">Rent this appartment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
